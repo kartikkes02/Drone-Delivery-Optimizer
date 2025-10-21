@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drone Route Optimization (TSP Approximation)</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="text-gray-100">
+    <div class="app-container p-4 md:p-8 flex flex-col">
+        <header class="text-center mb-8">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-teal-400 tracking-wider">
+                <span class="mr-2">&#x1F6F0;</span> Drone Delivery Optimizer
+            </h1>
+            <p class="text-teal-200 mt-2 text-lg">Solving the Traveling Salesman Problem (TSP) with Approximation</p>
+        </header>
+
+        <main class="grid grid-cols-1 md:grid-cols-3 gap-6 flex-grow">
+            <!-- Information Panel (Always visible) -->
+            <div class="md:col-span-1 p-6 bg-gray-800 rounded-xl shadow-2xl mobile-order">
+                <h2 class="text-2xl font-bold mb-4 text-teal-400">The Problem & Solution</h2>
+
+                <section class="mb-4">
+                    <h3 class="font-semibold text-lg mb-1 text-teal-300">1. The Traveling Salesman Problem (TSP)</h3>
+                    <p class="text-sm text-gray-300">
+                        TSP asks: "Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city?" For drone delivery, cities are drop-off points, and distance represents flight time/fuel.
+                    </p>
+                </section>
+
+                <section class="mb-4">
+                    <h3 class="font-semibold text-lg mb-1 text-teal-300">2. Why Approximation?</h3>
+                    <p class="text-sm text-gray-300">
+                        TSP is NP-hard. Finding the *absolute* shortest route is computationally too expensive for a large number of points. Real-world drone systems must calculate routes in seconds. We use **approximation algorithms** to find a "good enough" (near-optimal) solution quickly.
+                    </p>
+                </section>
+
+                <section class="mb-4">
+                    <h3 class="font-semibold text-lg mb-1 text-teal-300">3. Nearest Neighbor Algorithm</h3>
+                    <p class="text-sm text-gray-300">
+                        This simulator uses the simplest approximation: The Nearest Neighbor approach.
+                        <ol class="list-decimal list-inside ml-4 mt-2 space-y-1">
+                            <li>Start at the Depot.</li>
+                            <li>From the current point, travel to the closest *unvisited* point.</li>
+                            <li>Repeat until all points are visited.</li>
+                            <li>Return to the Depot.</li>
+                        </ol>
+                    </p>
+                </section>
+
+                <!-- Instructions -->
+                <div class="p-3 mt-4 bg-gray-700 rounded-lg">
+                    <h4 class="font-bold text-base text-white">Instructions:</h4>
+                    <p class="text-sm text-gray-400">Click on the map to add delivery points. The first point is automatically set as the 'Depot'.</p>
+                </div>
+            </div>
+
+            <!-- Canvas and Controls -->
+            <div class="md:col-span-2 flex flex-col">
+                <div class="flex-grow rounded-xl shadow-2xl overflow-hidden">
+                    <canvas id="canvas" class="w-full h-full"></canvas>
+                </div>
+
+                <!-- Controls -->
+                <div class="mt-4 p-4 bg-gray-800 rounded-xl flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0 sm:space-x-4">
+                    <div id="status-message" class="text-sm font-medium text-teal-400">
+                        Current Points: 0
+                    </div>
+                    <div class="flex space-x-4 w-full sm:w-auto">
+                        <button id="calculate-btn" class="btn-primary flex-1 sm:flex-none px-6 py-3 rounded-full font-bold text-gray-900 shadow-lg transition duration-150 ease-in-out disabled:opacity-50" disabled>
+                            <span class="mr-2">&#x2708;</span> Calculate Route
+                        </button>
+                        <button id="reset-btn" class="bg-red-600 hover:bg-red-700 flex-1 sm:flex-none px-6 py-3 rounded-full font-bold text-white shadow-lg transition duration-150 ease-in-out">
+                            Reset Map
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>

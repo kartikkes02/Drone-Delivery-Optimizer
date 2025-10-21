@@ -1,0 +1,35 @@
+:root {
+            --primary-color: #0d9488; /* Teal-600 */
+            --bg-dark: #1f2937; /* Gray-800 */
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+        }
+        .app-container {
+            min-height: 100vh;
+        }
+        .point-circle {
+            background-color: var(--primary-color);
+            box-shadow: 0 0 10px rgba(13, 148, 136, 0.7);
+        }
+        #canvas {
+            border: 2px solid var(--primary-color);
+            background-color: #030712; /* Darkest background for map */
+            cursor: crosshair;
+            touch-action: none; /* Prevents unwanted scrolling on touch devices */
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            transition: transform 0.1s;
+        }
+        .btn-primary:hover {
+            background-color: #0f766e;
+            transform: translateY(-1px);
+        }
+        /* Mobile-first adjustments for the control panel */
+        @media (max-width: 768px) {
+            .mobile-order {
+                order: -1; /* Puts controls above the canvas on mobile */
+            }
+        }
