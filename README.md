@@ -38,7 +38,7 @@ Since this project uses HTML, CSS, and JavaScript, no complex installation or en
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/kartikkes02/Drone-Delivery-Optimizer.git](https://github.com/kartikkes02/Drone-Delivery-Optimizer.git)
+    git clone https://github.com/kartikkes02/Drone-Delivery-Optimizer.git
     cd Drone-Delivery-Optimizer
     ```
 2.  **No dependencies to install.** All necessary files are included in the repository.
