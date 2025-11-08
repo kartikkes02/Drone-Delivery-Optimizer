@@ -35,8 +35,7 @@ You need **Python 3.x** installed on your machine.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/kartikkes02/Drone-Delivery-Optimizer.git](https://github.com/kartikkes02/Drone-Delivery-Optimizer.git)
-    cd Drone-Delivery-Optimizer
+    git clone https://github.com/kartikkes02/Drone-Delivery-Optimizer.git
     ```
 
 2.  **Create and activate a virtual environment** (recommended):
