@@ -12,9 +12,11 @@ This project addresses the complex logistical challenge of minimizing operationa
 
 This project is a client-side application built using fundamental web technologies, requiring no server-side setup:
 
-* **HTML5:** Provides the structure and content for the delivery interface and any map display.
-* **CSS3:** Handles the styling and visual presentation of the user interface.
-* **JavaScript (JS):** Contains the core logic for the optimization algorithms, handling user input, performing geospatial calculations, and displaying results.
+| Category | Technology | Logo |
+| :--- | :--- | :---: |
+| **Markup** | HTML5 | <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5 Badge"> |
+| **Styling** | CSS3 | <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3 Badge"> |
+| **Logic** | JavaScript | <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript Badge"> |
 
 ---
 
@@ -46,7 +48,7 @@ Since this project uses HTML, CSS, and JavaScript, no complex installation or en
 To run the project, simply open the main HTML file in your web browser.
 
 1.  Navigate to the project directory.
-2.  **Open the main file** (typically `index.html`) with your preferred browser (Chrome, Firefox, etc.).
+2.  **Open the main file** (typically `index.html`) with your preferred browser (Chrome, Firefox, Edge, etc.).
     * *Tip:* You can usually do this by right-clicking the file and selecting "Open with..." or by dragging the file into an open browser window.
 3.  The optimization logic will execute in your browser, and the results should be displayed on the page.
 
