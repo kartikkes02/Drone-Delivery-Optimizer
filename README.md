@@ -2,81 +2,69 @@
 
 ## ✨ Project Description
 
-The **Drone Delivery Optimizer** is a Python-based solution designed to enhance the efficiency of last-mile delivery services using unmanned aerial vehicles (UAVs).
+The **Drone Delivery Optimizer** is a web-based solution designed to enhance the efficiency of last-mile delivery services using unmanned aerial vehicles (UAVs).
 
-This project addresses the complex logistical challenge of minimizing operational costs and maximizing delivery speed by determining the most efficient delivery routes and/or the optimal central warehouse location within a service area. It uses quantitative methods to analyze geographical data, shipment volumes, and operational constraints to provide data-driven decisions for drone fleet management.
+This project addresses the complex logistical challenge of minimizing operational costs and maximizing delivery speed by determining the most efficient delivery routes and/or the optimal central warehouse location within a service area. It uses **quantitative methods implemented in JavaScript** to analyze geographical data, shipment volumes, and operational constraints, providing a visual and data-driven tool for optimizing drone fleet management directly in the browser.
 
-## 🚀 Features
-
-* **Optimal Route Calculation:** Implements a customizable algorithm (e.g., Genetic Algorithm or shortest path algorithms) to find the most efficient delivery paths for a fleet of drones.
-* **Warehouse Location Optimization:** Calculates the ideal centralized depot location that minimizes the total aggregate travel distance/time across all delivery points and shipment volumes.
-* **Geospatial Analysis:** Utilizes vector-based calculations for accurate distance measurement between cities or delivery nodes.
-* **Scalable Data Handling:** Processes input data (coordinates, shipment volumes, constraints) using `pandas` DataFrames.
-* **Data Visualization (Optional):** Provides plots or maps to visualize city nodes, the calculated optimal routes, and the chosen warehouse location.
+---
 
 ## 🛠️ Tech Stack
 
-The project is built using Python and relies on standard data science and optimization libraries:
+This project is a client-side application built using fundamental web technologies, requiring no server-side setup:
 
-* **Python**
-* **`pandas`:** For efficient data manipulation and structuring.
-* **`numpy`:** For vector calculations and mathematical operations.
-* **`matplotlib` / `seaborn`:** (Likely) For data visualization and plotting results.
+* **HTML5:** Provides the structure and content for the delivery interface and any map display.
+* **CSS3:** Handles the styling and visual presentation of the user interface.
+* **JavaScript (JS):** Contains the core logic for the optimization algorithms, handling user input, performing geospatial calculations, and displaying results.
+
+---
+
+## 🚀 Features
+
+* **Optimal Route Calculation:** Implements a customizable algorithm (e.g., shortest path or a simpler optimization routine) to find the most efficient delivery paths.
+* **Warehouse Location Optimization:** Calculates the ideal centralized depot location that minimizes the total aggregate travel distance/time across all delivery points.
+* **Geospatial Analysis:** Uses JavaScript-based calculations for accurate distance measurement between delivery nodes.
+* **Interactive Interface:** Provides a simple web interface for users to input data or view results.
+* **Data Visualization (Expected):** Renders a map or graphical representation to visualize delivery nodes, the calculated optimal routes, and the chosen warehouse location.
+
+---
 
 ## 🏁 Getting Started
 
-Follow these instructions to set up the project locally.
-
-### Prerequisites
-
-You need **Python 3.x** installed on your machine.
+Since this project uses HTML, CSS, and JavaScript, no complex installation or environment setup is necessary.
 
 ### Installation
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/kartikkes02/Drone-Delivery-Optimizer.git
+    git clone [https://github.com/kartikkes02/Drone-Delivery-Optimizer.git](https://github.com/kartikkes02/Drone-Delivery-Optimizer.git)
+    cd Drone-Delivery-Optimizer
     ```
+2.  **No dependencies to install.** All necessary files are included in the repository.
 
-2.  **Create and activate a virtual environment** (recommended):
-    ```bash
-    # For Linux/macOS
-    python3 -m venv venv
-    source venv/bin/activate
-    
-    # For Windows
-    python -m venv venv
-    .\venv\Scripts\activate
-    ```
+### 💡 Usage
 
-3.  **Install the required dependencies:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-    *(Note: You may need to create a `requirements.txt` file listing `pandas`, `numpy`, and any other necessary libraries.)*
+To run the project, simply open the main HTML file in your web browser.
 
-## 💡 Usage
+1.  Navigate to the project directory.
+2.  **Open the main file** (typically `index.html`) with your preferred browser (Chrome, Firefox, etc.).
+    * *Tip:* You can usually do this by right-clicking the file and selecting "Open with..." or by dragging the file into an open browser window.
+3.  The optimization logic will execute in your browser, and the results should be displayed on the page.
 
-The main logic resides in the primary Python or Jupyter Notebook file (e.g., `main.py` or `optimization_notebook.ipynb`).
+To test different scenarios, you will likely need to modify the input parameters (coordinates, shipment volumes) directly within the JavaScript files.
 
-1.  **Prepare Input Data:** Ensure your delivery data (city names, X/Y coordinates, weekly shipments) is correctly formatted. This is typically done within the main script or a dedicated input file (e.g., a `.csv`).
-2.  **Run the Optimizer:** Execute the main script:
-    ```bash
-    python main.py
-    ```
-3.  **Review Results:** The output will display the city identified as the optimal warehouse location and the resulting minimum total travel distance/cost. If visualization is included, a plot will be generated showing the solution.
-
-To test different scenarios, modify the input coordinates and shipment volumes within the data setup section of the script and re-run the optimization.
+---
 
 ## 🤝 Contributing
 
-Contributions are always welcome! If you have suggestions for improving the optimization algorithm, expanding the features (e.g., adding drone battery constraints or weather data), or fixing bugs, feel free to:
+Contributions are always welcome! If you have suggestions for improving the optimization algorithm, enhancing the user interface, or fixing bugs, please feel free to:
 
 1.  **Fork** the repository.
-2.  Create a new feature branch (`git checkout -b feature/AmazingFeature`).
-3.  Commit your changes (`git commit -m 'Add AmazingFeature'`).
-4.  Push to the branch (`git push origin feature/AmazingFeature`).
+2.  Create a new feature branch (`git checkout -b feature/better-map-ui`).
+3.  Commit your changes (`git commit -m 'Improved map visualization component'`).
+4.  Push to the branch (`git push origin feature/better-map-ui`).
 5.  Open a **Pull Request**.
+
+---
 
 ## 📄 License
 
