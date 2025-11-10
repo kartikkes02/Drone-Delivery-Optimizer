@@ -56,18 +56,6 @@ To test different scenarios, you will likely need to modify the input parameters
 
 ---
 
-## 🤝 Contributing
-
-Contributions are always welcome! If you have suggestions for improving the optimization algorithm, enhancing the user interface, or fixing bugs, please feel free to:
-
-1.  **Fork** the repository.
-2.  Create a new feature branch (`git checkout -b feature/better-map-ui`).
-3.  Commit your changes (`git commit -m 'Improved map visualization component'`).
-4.  Push to the branch (`git push origin feature/better-map-ui`).
-5.  Open a **Pull Request**.
-
----
-
 ## 📄 License
 
 This project is licensed under the **MIT License**. See the `LICENSE` file for more details.
